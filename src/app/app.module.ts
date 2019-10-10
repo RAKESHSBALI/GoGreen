@@ -9,13 +9,15 @@ import { AlertModule } from 'ngx-bootstrap/alert';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
+import { ProgressComponent } from './progress/progress.component';
 
 // import { ToastrModule, ToastNoAnimationModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProgressComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +36,10 @@ import { RegisterComponent } from './register/register.component';
     {
       path:'register',
       component:RegisterComponent
+    },
+    {
+      path:'progress',
+      component:ProgressComponent
     }
     
 

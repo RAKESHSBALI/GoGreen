@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit {
   openedWindow: number = 0
   showAlert = false;
   dismissible = true
-
+  isInfoWindowOpened = false;
   
   public darkStyle = [
     {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
@@ -117,11 +117,12 @@ export class RegisterComponent implements OnInit {
     }
 
     public locations = [{'id':1,'name':'Tree Plantation', 'latitude':18.730015, longitude:73.680617}, {'id':2,'name':'Swachh Bharat', 'latitude':18.548656, longitude:73.900238},{'id':3, 'name':'School Visit','latitude':18.366562, longitude:73.755899},
-    {'id':4,'name':'Blood Donation', 'latitude':18.532153, longitude:73.944402},{'id':5,'name':'Paper Bag Creation', 'latitude':18.591272, longitude:73.895983}]
+    {'id':4,'name':'Paper Recycling', 'latitude':18.532153, longitude:73.944402},{'id':5,'name':'Paper Bag Creation', 'latitude':18.591272, longitude:73.895983}]
     
     public openwindow(id){
       console.log(id);
       this.openedWindow = id
+      this.isInfoWindowOpened = true;
     }
 
     public isInfoWindowOpen(id){
@@ -131,6 +132,7 @@ export class RegisterComponent implements OnInit {
     public register(){
       console.log('Resgistered')
       this.showAlert = true;
+      this.isInfoWindowOpened = false;
     }
     // public registerold(){
     //   this.toastr.success('Hello world!', 'Toastr fun!',{

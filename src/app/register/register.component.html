@@ -1,3 +1,4 @@
+<div class = "page1">
 <nav class="navbar navbar-expand-lg navbar-light bg-light static-top mb-3 shadow">
     <div class="container">
       <a class="navbar-brand" href="#">Deutsche Bank</a>
@@ -11,8 +12,9 @@
                   <span class="sr-only">(current)</span>
                 </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Profile</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="#" routerLink="/progress">Profile
+              <span class="sr-only">(current)</span></a>
           </li>        
           
         </ul>
@@ -43,9 +45,9 @@
       [latitude]="location.latitude" 
       [longitude]="location.longitude"
       >
-      <i><h6>{{location.name}}</h6></i>
+      <p class="normal">{{location.name}}&nbsp;</p>
       <!-- <a href="">Register For Event</a> -->
-      <button type="button" class="btn btn-primary" (click)='register()'>
+      <button type="button" class="btn btn-outline-primary btn-sm" (click)='register()'>
         Register
       </button>
     </agm-info-window>
@@ -57,3 +59,4 @@
       </div>
     </div>
   </div>
+</div>
